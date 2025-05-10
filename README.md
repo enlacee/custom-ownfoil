@@ -30,3 +30,22 @@ Y pon:
 
 
 
+## Iniciar ownfoil
+
+```bash
+docker-compose up -d
+```
+
+
+
+### todo on local and pro
+
+- [x] Ejecutar script en servidor
+- [x] Configurar en cron el script.sh
+- [x] Iniciar docker compose
+    `docker-compose up -d`
+- [ ] Configurar Proxy reverso con **Caddy** Easy
+    - [ ] Exponer puertos: `80` & `443`
+    - [ ] 
+- [ ] Test prueba: acceder desde: `https://foil.nintendomagica.com`
+

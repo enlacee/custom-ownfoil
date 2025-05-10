@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # CONFIGURA ESTO
-API_TOKEN="TU_TOKEN"
+API_TOKEN="77soqtCoMWbwoz1yKYz-Y8gYwMp-17mIgtaYKfwU"
+# API_TOKEN="TU_TOKEN"
 ZONE_NAME="nintendomagica.com"
 RECORD_NAME="foil.nintendomagica.com"
 
