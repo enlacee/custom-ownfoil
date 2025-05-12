@@ -1,7 +1,14 @@
 #!/bin/bash
+# -----------------------------------------
+# Script para actualizar IP pública en DNS
+# Autor: Aníbal Copitán
+# Blog: https://blog.anibalcopitan.com
+# Fecha: 2025-05-12
+# -----------------------------------------
 
 #
-# Config and data fakemail4x4@gmail.com `nintendomagica.com`
+# Config data on cloudflare with accound fakemail4x4 
+# `nintendomagica.com`
 #
 
 # CONFIGURA ESTO
@@ -41,6 +48,7 @@ curl -s -X PUT "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/
 
 echo "IP actualizada a $CURRENT_IP"
 
+echo " --- Debuggin Data --- made by blo.anibalcopitan.com"
 echo $ZONE_ID
 echo " === "
 echo $RECORD_ID

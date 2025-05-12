@@ -51,3 +51,9 @@ docker-compose up -d
     - [ ] Testear estas condigs
 - [ ] Test prueba: acceder desde: `https://foil.nintendomagica.com`
 
+
+## ✍️ Autor
+
+Proyecto creado por Aníbal Copitán
+🔗📝 Blog: https://blog.anibalcopitan.com
+
