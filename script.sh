@@ -48,8 +48,12 @@ curl -s -X PUT "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/dns_records/
 
 echo "IP actualizada a $CURRENT_IP"
 
-echo " --- Debuggin Data --- made by blo.anibalcopitan.com"
-echo $ZONE_ID
-echo " === "
-echo $RECORD_ID
-echo "IP =" . $IP
+echo ""
+echo " ----------------------------------------------"
+echo " --- Debuggin Data"
+echo " --- Made by: https://blog.anibalcopitan.com"
+echo " ----------------------------------------------"
+echo ""
+echo "ZONE_ID:" . $ZONE_ID
+echo "RECORD_ID:" . $RECORD_ID
+echo "CURRENT_IP:" . $CURRENT_IP
