@@ -12,7 +12,9 @@ sudo apt install jq
 sudo apt install cron # optional in raspbery already installed
 ```
 
-## ⏰ Automatizar each 5minutes
+## ⏰ Automatizar actualizar IP local inhose server 
+
+(porque SiteGround no tiene servidor dns dinamico)
 
 Agrega este `./script.sh` a crontab:
 
@@ -44,8 +46,8 @@ docker-compose up -d
 - [x] Configurar en cron el script.sh
 - [x] Iniciar docker compose
     `docker-compose up -d`
-- [ ] Configurar Proxy reverso con **Caddy** Easy
-    - [ ] Exponer puertos: `80` & `443`
-    - [ ] 
+- [ ] Configurar Proxy reverso con **[Caddy](https://caddyserver.com/)** Easy
+    - [ ] Exponer puertos: `80` & `443` en ISP o router
+    - [ ] Testear estas condigs
 - [ ] Test prueba: acceder desde: `https://foil.nintendomagica.com`
 
