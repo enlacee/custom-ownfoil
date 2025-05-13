@@ -41,19 +41,19 @@ docker-compose up -d
 ## Comando para ver el o los servicios
 
 ```bash
-docker compose ps
+sudo docker compose ps
 ```
 
 ## Comando para dentener el servicio
 
 ```bash
-docker compose stop
+sudo docker compose stop
 ```
 
 ## Comando para iniciar el servicio
 
 ```bash
-docker compose start
+sudo docker compose start
 ```
 
 
