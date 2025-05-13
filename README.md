@@ -56,6 +56,14 @@ sudo docker compose stop
 sudo docker compose start
 ```
 
+## Extra re build contenedor:
+
+Si agregaste cosas al docker-compose.yml puedes usar esto:
+
+```bash
+docker compose down # elimina contenedores antiguos
+docker compose up -d # reconstruir contenedores
+```
 
 ### todo on local and pro
 

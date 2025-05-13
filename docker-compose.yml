@@ -15,6 +15,7 @@ services:
       - USER_GUEST_NAME=guest
       - USER_GUEST_PASSWORD=oerze!@8981XYZ
     volumes:
+      - /media:/media
       - ./games:/games
       # - /dev/games:/games # Opcional cambiar a path de disco
       - ./config:/app/config
