@@ -38,6 +38,23 @@ Y pon:
 docker-compose up -d
 ```
 
+## Comando para ver el o los servicios
+
+```bash
+docker compose ps
+```
+
+## Comando para dentener el servicio
+
+```bash
+docker compose stop
+```
+
+## Comando para iniciar el servicio
+
+```bash
+docker compose start
+```
 
 
 ### todo on local and pro
