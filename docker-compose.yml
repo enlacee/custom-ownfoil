@@ -9,15 +9,14 @@ services:
       - PUID=1000
       - PGID=1000
       # to create/update an admin user at startup
-      - USER_ADMIN_NAME=admin
-      - USER_ADMIN_PASSWORD=asdvnf!546XYZ
+      - USER_ADMIN_NAME=${USER_ADMIN_NAME}
+      - USER_ADMIN_PASSWORD=${USER_ADMIN_PASSWORD}
       # to create/update a regular user at startup
-      - USER_GUEST_NAME=guest
-      - USER_GUEST_PASSWORD=oerze!@8981XYZ
+      - USER_GUEST_NAME=${USER_GUEST_NAME}
+      - USER_GUEST_PASSWORD=${USER_GUEST_PASSWORD}
     volumes:
-      - /media:/media
+      - /media:/media # support HDD
       - ./games:/games
-      # - /dev/games:/games # Opcional cambiar a path de disco
-      - ./config:/app/config
+      - ./config:/config
     ports:
       - "8465:8465"

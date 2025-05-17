@@ -11,8 +11,19 @@
 # `nintendomagica.com`
 #
 
+# Cargar las variables del archivo .env
+if [ -f .env ]; then
+  set -a
+  source .env
+  set +a
+else
+  echo "⚠️  Archivo .env no encontrado. Crea uno a partir de .env.dist"
+  exit 1
+fi
+
+
 # CONFIGURA ESTO
-API_TOKEN="77soqtCoMWbwoz1yKYz-Y8gYwMp-17mIgtaYKfwU"
+API_TOKEN="$API_CLOUDFLARE_TOKEN"
 ZONE_NAME="nintendomagica.com"
 RECORD_NAME="foil.nintendomagica.com"
 IP_FILE="/tmp/last_ip.txt"
@@ -54,6 +65,7 @@ echo " --- Debuggin Data"
 echo " --- Made by: https://blog.anibalcopitan.com"
 echo " ----------------------------------------------"
 echo ""
-echo "ZONE_ID:" . $ZONE_ID
-echo "RECORD_ID:" . $RECORD_ID
-echo "CURRENT_IP:" . $CURRENT_IP
+echo "API_TOKEN:" $API_TOKEN
+echo "ZONE_ID:" $ZONE_ID
+echo "RECORD_ID:" $RECORD_ID
+echo "CURRENT_IP:" $CURRENT_IP

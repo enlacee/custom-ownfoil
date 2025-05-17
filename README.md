@@ -35,6 +35,10 @@ Y pon:
 ## Iniciar ownfoil
 
 ```bash
+git clone <repository-url>
+cd custom-ownfoil
+mv .env.example .env # Create a .env file and set the creddentials
+
 docker-compose up -d
 ```
 
@@ -56,7 +60,7 @@ sudo docker compose stop
 sudo docker compose start
 ```
 
-## Extra re build contenedor:
+## Extra 1: re build contenedor:
 
 Si agregaste cosas al docker-compose.yml puedes usar esto:
 
@@ -64,6 +68,31 @@ Si agregaste cosas al docker-compose.yml puedes usar esto:
 docker compose down # elimina contenedores antiguos
 docker compose up -d # reconstruir contenedores
 ```
+
+## Extra 2: debugging
+
+En el archivo `docker-compose.yml` el `container_name` = `ownfoil`
+
+```bash
+docker compose logs -f ownfoil
+docker exec -it ownfoil bash
+
+# debuging no usar docker-compose restart ni  docker-compose up -d
+# modificar /app/app.py 
+docker restart ownfoil
+
+```
+
+### Extra 3: verificando si el certificado HTTPS 
+
+```bash
+curl -v https://foil.nintendomagica.com --resolve foil.nintendomagica.com:443:127.0.0.1
+```
+
+![result bash command executed](docs/README/Screenshot_20250514_150346.png)
+
+
+<!--  X-Forwarded-Proto header. -->
 
 ### todo on local and pro
 
