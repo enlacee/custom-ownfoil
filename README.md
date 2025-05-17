@@ -1,11 +1,17 @@
 # Project Ownfoil
 
-Exponer los puertos:
-    
+This is a custom Ownfoil made and documented by [Blog Anibal Copitan](https://blog.anibalcopitan.com/2025/05/configura-tu-servidor-de-juegos.html)
+Review the content and adapt it to your needs.
+
+
+## Config your local and router `expose the ports`
+
+Exponer los puertos:  
+
     80 -> http (obligatorio abierto para **Caddy** auto SSL)
     443 -> https
 
-first you need the qt package on your raspbery:
+First you need the `qt` package on your Raspberry:  
 
 ```bash
 sudo apt install jq
@@ -15,7 +21,6 @@ sudo apt install cron # optional in raspbery already installed
 ## ⏰ Automatizar actualizar IP local inhose server 
 
 (porque SiteGround no tiene servidor dns dinamico)
-
 Agrega este `./script.sh` a crontab:
 
 ```bash
@@ -28,8 +33,7 @@ Y pon:
 */5 * * * * /ruta/a/tu/script.sh
 ```
 
-> Tu subdominio foil.nintendomagica.com siempre apuntará a tu IP pública, y se actualizará automáticamente cada 5 minutos.
-
+> Tu subdominio `foil.nintendomagica.com` siempre apuntará a tu IP pública, y se actualizará automáticamente cada 5 minutos.
 
 
 ## Iniciar ownfoil
@@ -100,14 +104,17 @@ curl -v https://foil.nintendomagica.com --resolve foil.nintendomagica.com:443:12
 - [x] Configurar en cron el script.sh
 - [x] Iniciar docker compose
     `docker-compose up -d`
-- [ ] Configurar Proxy reverso con **[Caddy](https://caddyserver.com/)** Easy
-    - [ ] Exponer puertos: `80` & `443` en ISP o router
-    - [ ] Testear estas condigs
-- [ ] Test prueba: acceder desde: `https://foil.nintendomagica.com`
+- [x] Configurar Proxy reverso con **[Caddy](https://caddyserver.com/)** Easy
+    - [x] Exponer puertos: `80` & `443` en ISP o router
+    - [x] Testear estas configs
+- [x] Test prueba: acceder desde: `https://foil.nintendomagica.com`
 
 
-## ✍️ Autor
-
-Proyecto creado por Aníbal Copitán
-🔗📝 Blog: https://blog.anibalcopitan.com
-
+**Notes:**
+ - To connect from nintendo swich device not connect using: `https://foil.nintendomagica.com`
+ - Altenative soluciones:
+    - Need to test: config in my self subdomain `https://foil.anibalcopitan.com`
+    - Need to test: config in my seft subdomain but by HTTP
+    - Create or use VPS for to get Up the project
+        - without restriction of router or ISP
+        - Need to config HDD in `media` on VPN by VPN or another like tunnel
